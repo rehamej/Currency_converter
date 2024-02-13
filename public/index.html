@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Luxurious+Script&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:wght@200&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+  }
+
+  form :where(input, select, button){
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+  form p {
+    font-size: 18px;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  form input{
+    height: 50px;
+    font-size: 17px;
+    padding: 0 15px;
+    border: 1px solid #999;
+    margin-bottom: 15px;
+  }
+  form input:focus{
+    padding: 0 14px;
+    border: 2px solid #5b21b6;
+
+  }
+  .select-box select{
+    width: auto;
+    font-size: 16px;
+    margin: 0 -5px 0 5px;
+    border: 1px solid #999;
+    padding: 5px;
+  }
+  /* .select-box select::-webkit-scrollbar{
+    width: 8px;
+}
+.select-box select ::-webkit-scrollbar-track{
+    background-color: #fff;}
+
+.select-box select ::-webkit-scrollbar-thumb{
+background-color: #888;
+border-radius: 8px;
+border-right: 2px solid #fff;
+} */
+  .select-box img{
+    max-width: 25px;
+  }
+  .select-box .icon{
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 30px;
+  }
+</style>
+
+<body class="flex items-center justify-center min-h-100vh bg-violet-800">
+    <div class="wrapper p-8 bg-white rounded-md" style="width: 370px;">
+
+        <header class="font-bold text-center" style="font-size: 28px;">Currency converter</header>
+        <form action="#" class="mt-10 mr-5">
+
+            <div class="amount">
+                <p>Enter amount</p>
+                <input type="text" value="1">
+            </div>
+
+            <!-- drop-list -->
+            <div class="drop flex items-center justify-between">
+                <div class="from">
+                    <p>From</p>
+
+                    <div class="select-box flex h-7 items-center justify-center" style="width: 115px;">
+                        <img src="" alt="">
+
+                        <select name="" id="" >
+                            <!-- <option value="USD" selected>USD</option>
+                            <option value="SAR">SAR</option>
+                            <option value="GBD">GBD</option>
+                            <option value="AED">AED</option>
+                            <option value="KRW">KRW</option> -->
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="icon cursor-pointer mt-2 text-xl"><i class="fas fa-exchange-alt"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                  </svg>
+                  </i></div>
+
+                <div class="to">
+                    <p>To</p>
+
+                    <div class="select-box flex h-7 items-center justify-center" style="width: 115px;">
+                        <img src="" alt="">
+
+                        <select name="" id="">
+                            <option value="USD">USD</option>
+                            <option value="SAR" selected>SAR</option>
+                            <option value="GBD">GBD</option>
+                            <option value="AED">AED</option>
+                            <option value="KRW">KRW</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+        <div class="exchange-rate flex justify-center text-left mt-5 mb-8">Hold on tight...</div>
+        <button class="h-12 text-white text-base bg-violet-800 cursor-pointer">get exchange rate</button>
+        </form>
+
+    </div>
+
+    <script src="country.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
